@@ -1,18 +1,16 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>lidar-bot_description</name>
+  <name>lidar_bot_control</name>
   <version>1.0.0</version>
-  <description>Rviz and Gazebo description of the robot</description>
-
+  <description>Publishes velocity information to robot from the xbox controller's input</description>
   <maintainer email="sadtzy@proton.me">sadtzy</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <depend>xacro</depend>
-  <depend>robot_state_publisher</depend>
-  <depend>joint_state_publisher_gui</depend>
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

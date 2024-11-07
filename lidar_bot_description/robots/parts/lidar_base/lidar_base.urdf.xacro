@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find lidar-bot_description)/robots/parts/lidar_base/lidar_base.gazebo.xacro"/>
+  <xacro:include filename="$(find lidar_bot_description)/robots/parts/lidar_base/lidar_base.gazebo.xacro"/>
   
   <xacro:macro name="lidar_base_v0" params="parent *joint_origin">
 	<joint name="lidar_base_link_joint" type="fixed">
@@ -13,12 +13,12 @@
 	<link name="lidar_base_link">
 	  <visual>
 		<geometry>
-		  <mesh filename="package://lidar-bot_description/meshes/DAE/lidar_base/YDlidar_base.dae"/>
+		  <mesh filename="package://lidar_bot_description/meshes/DAE/lidar_base/YDlidar_base.dae"/>
 		</geometry>
 	  </visual>
 	  <collision>
 		<geometry>
-		  <mesh filename="package://lidar-bot_description/meshes/STL/lidar_base/YDlidar_base.stl"/>
+		  <mesh filename="package://lidar_bot_description/meshes/STL/lidar_base/YDlidar_base.stl"/>
 		</geometry>
 	  </collision>
 	  <inertial>

@@ -10,5 +10,5 @@ def generate_launch_description():
             default_value='false',
             description='Use simulation (Gazebo) clock if true'),
         Node(package = "joy",executable = "joy_node"),
-        Node(package='lidar-bot_control', executable='lidar-bot_control.py', output='screen'),
+        Node(package='lidar_bot_control', executable='lidar_bot_control.py', output='screen'),
     ])

@@ -17,23 +17,23 @@ def generate_launch_description():
     # Launch Arguments
     use_sim_time = LaunchConfiguration('use_sim_time', default=True)
 
-    lidar-bot_description_path = os.path.join(
-        get_package_share_directory('lidar-bot_description'))
+    lidar_bot_description_path = os.path.join(
+        get_package_share_directory('lidar_bot_description'))
     
-    lidar-bot_sim_path = os.path.join(
-        get_package_share_directory('lidar-bot_sim'))
+    lidar_bot_sim_path = os.path.join(
+        get_package_share_directory('lidar_bot_sim'))
 
     # Set gazebo sim resource path
     gazebo_resource_path = SetEnvironmentVariable(
         name='GZ_SIM_RESOURCE_PATH',
         value=[
-            os.path.join(lidar-bot_sim_path, 'worlds'), ':' +
-            str(Path(lidar-bot_description_path).parent.resolve())
+            os.path.join(lidar_bot_sim_path, 'worlds'), ':' +
+            str(Path(lidar_bot_description_path).parent.resolve())
             ]
         )
 
     arguments = LaunchDescription([
-                DeclareLaunchArgument('world', default_value='lidar-bot_world',
+                DeclareLaunchArgument('world', default_value='lidar_bot_world',
                           description='Gz sim World'),
            ]
     )
@@ -50,9 +50,9 @@ def generate_launch_description():
                 ]
              )
 
-    xacro_file = os.path.join(lidar-bot_description_path,
+    xacro_file = os.path.join(lidar_bot_description_path,
                               'robots',
-                              'lidar-bot.urdf.xacro')
+                              'lidar_bot.urdf.xacro')
 
     doc = xacro.process_file(xacro_file, mappings={'use_sim' : 'true'})
 
@@ -78,7 +78,7 @@ def generate_launch_description():
                    '-R', '0.0',
                    '-P', '0.0',
                    '-Y', '0.0',
-                   '-name', 'lidar-bot',
+                   '-name', 'lidar_bot',
                    '-allow_renaming', 'false'],
     )
 
@@ -108,7 +108,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    rviz_config_file = os.path.join(lidar-bot_description_path, 'config', 'lidar-bot_config.rviz')
+    rviz_config_file = os.path.join(lidar_bot_description_path, 'config', 'lidar_bot_config.rviz')
 
     rviz = Node(
         package="rviz2",

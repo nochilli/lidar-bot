@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(lidar-bot_control)
+project(lidar_bot_control)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -33,8 +33,8 @@ install(
 
 install(
     PROGRAMS
-    scripts/lidar-bot_control.py
-    launch/lidar-bot_control.launch.py
+    scripts/lidar_bot_control.py
+    launch/lidar_bot_control.launch.py
     DESTINATION lib/${PROJECT_NAME}
   )
 

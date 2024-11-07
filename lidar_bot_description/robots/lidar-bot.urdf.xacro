@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <!-- Basic differential drive mobile base -->
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="lidar-bot">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="lidar_bot">
   
-  <xacro:include filename="$(find lidar-bot_description)/gazebo/lidar-bot.gazebo.xacro" />
-  <xacro:include filename="$(find lidar-bot_description)/ros2_control/lidar-bot.ros2_control.xacro" />
-  <xacro:include filename="$(find lidar-bot_description)/robots/parts/base/base.urdf.xacro"/>
-  <xacro:include filename="$(find lidar-bot_description)/robots/parts/suspension/suspension.urdf.xacro"/>
-  <xacro:include filename="$(find lidar-bot_description)/robots/parts/wheel/wheel.urdf.xacro"/>
-  <xacro:include filename="$(find lidar-bot_description)/robots/parts/lidar_base/lidar_base.urdf.xacro"/>
-  <xacro:include filename="$(find lidar-bot_description)/robots/parts/lidar_head/lidar_head.urdf.xacro"/>
+  <xacro:include filename="$(find lidar_bot_description)/gazebo/lidar_bot.gazebo.xacro" />
+  <xacro:include filename="$(find lidar_bot_description)/ros2_control/lidar_bot.ros2_control.xacro" />
+  <xacro:include filename="$(find lidar_bot_description)/robots/parts/base/base.urdf.xacro"/>
+  <xacro:include filename="$(find lidar_bot_description)/robots/parts/suspension/suspension.urdf.xacro"/>
+  <xacro:include filename="$(find lidar_bot_description)/robots/parts/wheel/wheel.urdf.xacro"/>
+  <xacro:include filename="$(find lidar_bot_description)/robots/parts/lidar_base/lidar_base.urdf.xacro"/>
+  <xacro:include filename="$(find lidar_bot_description)/robots/parts/lidar_head/lidar_head.urdf.xacro"/>
   <xacro:property name="M_PI" value="3.14159274"/>
 
   <material name="gray">
@@ -102,7 +102,7 @@
   <xacro:steering_gazebo_v0 prefix="rear_right"/>
   <xacro:steering_gazebo_v0 prefix="rear_left"/>
 
-  <xacro:lidar-bot_gazebo/>
-  <xacro:lidar-bot_ros2_control/>
+  <xacro:lidar_bot_gazebo/>
+  <xacro:lidar_bot_ros2_control/>
     
 </robot>

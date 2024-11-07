@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find lidar-bot_description)/robots/parts/suspension/suspension.gazebo.xacro"/>
+  <xacro:include filename="$(find lidar_bot_description)/robots/parts/suspension/suspension.gazebo.xacro"/>
   
   <xacro:macro name="steering_v0" params="prefix parent *joint_origin *joint_axis">
 	<joint name="${prefix}_steering_joint" type="revolute">
@@ -15,12 +15,12 @@
 	<link name="${prefix}_steering_link">
 	  <visual>
 		<geometry>
-		  <mesh filename="package://lidar-bot_description/meshes/DAE/suspension/${prefix}_link.dae"/>
+		  <mesh filename="package://lidar_bot_description/meshes/DAE/suspension/${prefix}_link.dae"/>
 		</geometry>
 	  </visual>
 	  <collision>
 		<geometry>
-		  <mesh filename="package://lidar-bot_description/meshes/STL/suspension/sus_link.stl"/>
+		  <mesh filename="package://lidar_bot_description/meshes/STL/suspension/sus_link.stl"/>
 		</geometry>
 	  </collision>
 	  <inertial>

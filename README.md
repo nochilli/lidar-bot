@@ -44,13 +44,13 @@ sudo apt install ros-jazzy-ros2-control ros-jazzy-ros2-controllers ros-jazzy-ros
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/nochilli/lidar-bot.git
+   git clone https://github.com/nochilli/lidar_bot.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd lidar-controlled-robot
+   cd lidar_bot
    ```
 
 3. Build the workspace:
@@ -66,7 +66,7 @@ sudo apt install ros-jazzy-ros2-control ros-jazzy-ros2-controllers ros-jazzy-ros
 To launch the robot and Gazebo environment:
 
 ```bash
-ros2 launch lidar-bot lidar-bot_spawn.launch.py
+ros2 launch lidar_bot lidar_bot_spawn.launch.py
 ```
 
 This will start Gazebo with the robot in the environment and initialize the LIDAR sensor.

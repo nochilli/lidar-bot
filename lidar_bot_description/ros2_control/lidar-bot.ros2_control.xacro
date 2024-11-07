@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:macro name="lidar-bot_ros2_control">
+  <xacro:macro name="lidar_bot_ros2_control">
 
     <ros2_control name="fws" type="system">
       <hardware>
